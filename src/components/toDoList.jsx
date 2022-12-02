@@ -6,6 +6,7 @@ import { addItem } from '../action';
 import ToDoCard from './toDoCard';
 import "./toDoList.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FcCheckmark , FcMinus } from "react-icons/fc";
 
 const ToDoList = () => {
 
@@ -23,7 +24,7 @@ const ToDoList = () => {
         <input type="text" className="addElement" ref={item}placeholder="Add work to do"/>
         </div>
         <button className='buttonAdd' onClick={()=>{console.log(item.current.value)
-            dispatch(addItem(item.current.value))}}>Add Item</button>
+            dispatch(addItem(item.current.value))}}><FcCheckmark id="rightIcon"/></button>
             <div className='listsCall'>
         {itemList.list.map((listOfItem)=>{
            return <ToDoCard item={listOfItem.element} id={listOfItem.id} />

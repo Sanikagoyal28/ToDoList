@@ -43,21 +43,31 @@
     /* border-bottom: 2px solid black; */
 }
 .buttonAdd{
-    background-color: rgb(246, 239, 231);
+   background: none;
+   border:none;
     border:1px solid black;
-    border-radius: 5px;
+    border-radius: 45%;
     position:absolute;
-    top:34.5vh;
-    left:54vw;
+    top:33.45vh;
+    left:56.6vw;
     cursor:pointer;
+    background-color:rgba(255,255,255,0.8);
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-right:3px;
+    padding-left:3.5px;
 }
 .buttonDelete{
-    background-color: rgb(246, 239, 231);
     border:1px solid black;
-    border-radius: 5px;
+    border-radius: 45%;
     position:absolute;
-    left:55vw;
+    margin-top:-0.7vh;
+    left:56.6vw;
     cursor:pointer;
+    background-color:rgba(255,255,255,0.8);
+    padding-top:2.5px;
+    padding-right:3.5px;
+    padding-left:4px;
     /* position:absolute; */
     /* left:10vw; */
 }
@@ -76,4 +86,10 @@
 }
 .cardList:hover{
     border:1px dashed rgb(3, 3, 31);
+}
+#rightIcon{
+    font-size: 22px;
+}
+#wrongIcon{
+    font-size: 22px;
 }
