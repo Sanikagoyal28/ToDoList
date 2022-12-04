@@ -19,9 +19,11 @@ const addNewItem =(stateNew=state,action)=>{
     switch(action.type){
         case "ADDITEM":
         const {id, element} = action.payload;  
+        if(element){
         return {
-            ...stateNew, list:[...stateNew.list , action.payload]
+            ...stateNew, list:[...stateNew.list , action.payload]  
         }
+    }
         // return (
         //    initial=[...state,{id:id,element:element}]
         // )

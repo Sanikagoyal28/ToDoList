@@ -10,7 +10,7 @@ import { FcCheckmark , FcMinus } from "react-icons/fc";
 
 const ToDoList = () => {
 
-    const item= useRef("");
+    var item= useRef("");
     const dispatch= useDispatch();
 
     const itemList = useSelector((state)=>state.addNewItem);
@@ -21,10 +21,11 @@ const ToDoList = () => {
     <FontAwesomeIcon icon="fa-duotone fa-check" />
         <p className="listHead">To Do List</p>
         <div className='addElement1'>
-        <input type="text" className="addElement" ref={item}placeholder="Add work to do"/>
+        <input type="text" className="addElement" ref={item} placeholder="Add work to do" required/>
         </div>
-        <button className='buttonAdd' onClick={()=>{console.log(item.current.value)
-            dispatch(addItem(item.current.value))}}><FcCheckmark id="rightIcon"/></button>
+        <button className='buttonAdd' type="submit" onClick={()=>{
+          console.log(item.current.value)
+            dispatch(addItem(item.current.value),item.current.value="")}}><FcCheckmark id="rightIcon"/></button>
             <div className='listsCall'>
         {itemList.list.map((listOfItem)=>{
            return <ToDoCard item={listOfItem.element} id={listOfItem.id} />
